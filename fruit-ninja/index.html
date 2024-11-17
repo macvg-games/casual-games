@@ -1,102 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Y71QM9DR66"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-Y71QM9DR66");
-    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="cloak">Fruit Ninja | MacVG</title>
-    <span id="macvgmacvg" name="game380"></span>
-    <link
-      rel="shortcut icon"
-      href="/logo.png"
-      type="image/x-icon"
-      class="favicon"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <link rel="stylesheet" href="/macvg/projects/style.css" />
-    <script src="/macvg/projects/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Fruit Ninja" />
+    <meta name="apple-mobile-web-app-title" content="Fruit Ninja" />
+    <meta name="msapplication-starturl" content="./" />
+    <title>Fruit Ninja | MacVG</title>
+    <script type="text/javascript" src="Jump_Gamemonetize.js"></script>
+    <style>
+      @font-face {
+        font-family: gangofchinese;
+        src: url("assets/font/gangofchinese.ttf");
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100% !important;
+        margin: 0;
+        background-color: #000000 !important;
+      }
+
+      .fontLoader {
+        position: absolute;
+        left: -1000px;
+        visibility: hidden;
+      }
+
+      #phaser-canvas {
+        margin: 0 auto;
+        background-color: #000000;
+      }
+
+      body,
+      #content {
+        height: 100vh !important;
+        max-height: 100vh !important;
+      }
+
+      #divAds,
+      #tempads {
+        display: none;
+      }
+
+      /* canvas{
+          width: 100%;
+          height: 100%;
+          display: grid !important;
+          grid-area: 1/1;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+          max-height: 100vh !important;
+      } */
+
+      #enable3d-three-canvas,
+      #enable3d-phaser-canvas {
+        min-width: 100%;
+        max-width: 100%;
+        max-width: -webkit-fill-available;
+        max-width: -moz-available;
+        max-width: -webkit-fill-available;
+        max-width: fill-available;
+        margin: 0 auto;
+      }
+
+      /* @media screen and (max-width: 768px) {
+        #enable3d-three-canvas, #enable3d-phaser-canvas {
+          min-width: auto !important;
+          max-width: auto;
+          width: 960px;
+          height: auto;
+          margin: 0 auto;
+        }
+      } */
+
+      @media (min-aspect-ratio: 1.85) {
+        #enable3d-three-canvas,
+        #enable3d-phaser-canvas {
+          width: 960px;
+          min-width: 640px;
+        }
+      }
+
+      @media (min-aspect-ratio: 8/4) {
+        #enable3d-three-canvas,
+        #enable3d-phaser-canvas {
+          min-width: 640px;
+          /* background-color: aquamarine; */
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="game-container">
-      <div class="game-related">
-        <div class="actual" id="gameframe">
-          <iframe src="game.html" frameborder="0" id="iframe">
-          </iframe>
-          <div class="tool-bar">
-            <div class="more-left">
-              <img src="logo.jpg" alt="" />
-            </div>
-            <div class="leftest">
-              <h5 class="title">Fruit Ninja</h5>
-              <a href="">Halfbrick Studios</a>
-            </div>
-            <img src="/macvg/back.svg" id="back" style="width: 20pxoo" />
-            <img src="/macvg/star-regular.svg" style="width: 20px" id="star" />
-            <img src="/macvg/share-solid.svg" style="width: 20px" id="share" />
-            <img src="/macvg/download.svg" id="download" />
-            <img src="/macvg/expand.svg" id="fullscreen" />
-          </div>
-        </div>
-        <div class="more-info">
-          <div class="info">
-            <h3>About</h3>
-            Oops, you caught us, we're still working hard to provide game
-            description on this game! In the upcoming updates, more and more
-            games will have their descriptions and instructions to help you beat
-            it, so stay tuned for more updates!<br /><br /><br /><br /><br /><br /><br />
-          </div>
-          <div class="info">
-            <h3>Controls</h3>
-            <ul>
-              <li>Drag: Slice</li>
-            </ul>
-          </div>
-          <div class="info">
-            <h3>Game Information</h3>
-            <ul>
-              <li>Release Date: April 21, 2010</li>
-              <li>Developer: Halfbrick Studios</li>
-              <li>Players: 100M+</li>
-              <li>Catagory:
-                <a href="/macvg/casual.html" style="color: white"
-                  >Casual</a
-                >
-              </li>
-              <li>Genre: Arcade Games</li>
-              <li>Build: HTML5, JavaScript</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="nav">
-          <a href="/macvg/" class="logo">
-            <img src="/macvg/macvg-logo.png" alt="" />
-          </a>
-          <div class="links">
-            <a href="/macvg/new.html" class="nav-link">New</a>
-            <a href="/macvg/trending.html" class="nav-link">Trending</a>
-            <a href="/macvg/groups.html" class="nav-link">Groups</a>
-            <a href="/macvg/bot.html" class="nav-link">Chat</a>
-            <a href="/macvg/projects/macboard/" class="nav-link">MacBoard</a>
-            <a href="/macvg/settings.html" class="nav-link">Settings</a>
-          </div>
-
-          <div class="copyright">© 2023 MacWeb</div>
-        </div>
-      </div>
+    <div class="fontLoader" style="font-family: gangofchinese">-</div>
+    <div class="fontLoader" style="font-family: gangofchinese">-</div>
+    <div id="content">
+      <div id="phaser-canvas"></div>
     </div>
+    <!-- <div id="phaser-game"></div> -->
+    <style id="injectStyles">
+      html,
+      body {
+        background: none !important;
+      }
+    </style>
+    <script type="text/javascript" src="vendors.bundle.js"></script>
+    <script type="text/javascript" src="main.bundle.js"></script>
+    <script>
+      (function (a, b, c) {
+        var d = a.getElementsByTagName(b)[0];
+        a.getElementById(c) ||
+          ((a = a.createElement(b)),
+          (a.id = c),
+          (a.src = "patch/js/gm-sdk-preload.js?v=" + Date.now()),
+          d.parentNode.insertBefore(a, d));
+      })(document, "script", "gamemonetize-preload-api");
+    </script>
   </body>
 </html>
